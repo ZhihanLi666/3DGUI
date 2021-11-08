@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <style>
+            #header {
+                background-color:black;
+                color:white;
+                text-align:center;
+                padding:5px;
+            }
+        #nav {
+            line-height:30px;
+            background-color:#eeeeee;
+            height:300px;
+            width:200px;
+            float:left;
+            padding:5px;
+        }
+        #section {
+            width:1000px;
+            float:left;
+            padding:10px
+        }
+        #footer {
+            background-color:black;
+            color:white;
+            clear:both;
+            text-align:center;
+            padding:5px;
+        }
+        </style>
+        <title>3dcalculator</title>
+        <body>
+        <div id="header">
+            <h1>3D position calculator </h1>
+        </div>
+        
+        <div id="nav">
+            <a href="https://zhihanli666.github.io/ZhihanLi-Homepage">Home</a><br>
+            <a href="https://zhihanli666.github.io/ZhihanLi-About">About</a><br>
+            <a href="https://zhihanli666.github.io/ZhihanLi-Research/">Research</a><br>
+            <a href="https://zhihanli666.github.io/ZhihanLi-Contact">Contact</a><br>
+            <a href="https://zhihanli666.github.io/ZhihanLi-Electronicsapp">Electronics appetizer</a><br>
+            <a href="http://3dgui.captain-alien-li.com/">3D position calculator</a><br>
+        </div>
+        
+        <div id="section">
+            <p style="font-size:30px">
+            This can be used to calculate the destination point from a point with a distance along a direction in 3D.
+                </p>
+                <label for="name">Enter the positiom start point: </label>
+                <label for="name">x0: </label>
+                <input id="name" type="number" > 
+                <label for="name2">y0: </label>
+                <input id="name2" type="number" >  
+                <label for="name3">z0: </label>
+                <input id="name3" type="number" >   
+            <p>
+            </p>
+            <label for="direction">Enter the direction vector components: </label>
+            <label for="name">n1: </label>
+            <input id="name11" type="number" > 
+            <label for="name22">n2: </label>
+            <input id="name22" type="number" >  
+            <label for="name3">n3: </label>
+            <input id="name33" type="number" >   
+        <p>
+        </p>
+        <label for="direction">Set distance from (x0,y0,z0): </label>
+        <label for="name">d: </label>
+        <input id="number4" type="number" > 
+        
+    <p>
+        <button onclick="myFunction()">Calculate</button>
+    </p>
+    <label for="direction">Result: </label>
+    </p>
+    <label for="direction">x: </label>
+    <p id='demo'></p>
+    <label for="direction">y: </label>
+    <p id='demo2'></p>
+    <label for="direction">z: </label>
+    <p id='demo3'></p>
+        <script>
+            function myFunction() {
+                var d =  document.getElementById('number4');
+                var csa = document.getElementById('name11').value/((document.getElementById('name22').value)**2+(document.getElementById('name33').value)**2+(document.getElementById('name11').value)**2)**(1/2);
+                var csb = document.getElementById('name22').value/((document.getElementById('name22').value)**2+(document.getElementById('name33').value)**2+(document.getElementById('name11').value)**2)**(1/2);
+                var csc = document.getElementById('name33').value/((document.getElementById('name22').value)**2+(document.getElementById('name33').value)**2+(document.getElementById('name11').value)**2)**(1/2);
+                var x =  Number(document.getElementById('name').value)+csa*d.value;
+                var y =  Number(document.getElementById('name2').value)+csb*d.value;
+                var z =  Number(document.getElementById('name3').value)+csc*d.value;
+                
+                document.getElementById('demo').innerHTML=x 
+                document.getElementById('demo2').innerHTML=y
+                document.getElementById('demo3').innerHTML=z
+                //document.getElementById('demo3').innerHTML=csc
+            
+                //document.getElementById('demo2').innerHTML=y.value
+                //document.getElementById('demo3').innerHTML=z.value 
+            }
+
+                
+                
+                
+        </script>
+        
+                    
+                
+            <p>       
+
+        </div>
+        
+        <div id="footer">
+            Copyright @Zhihan Li
+        </div>
+        
+    
+        <script>
+
+        </script>
+    
+    
+       
+   
+
+
+<body>
+
+    <head>
+<html>
